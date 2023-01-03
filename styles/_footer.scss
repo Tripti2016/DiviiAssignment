@@ -1,0 +1,87 @@
+@import "./variable";
+
+.footer {
+  height: 35vh;
+  background-color: #313131;
+ 
+  nav {
+    @include flexCenter(row, center);
+    height: 50px;
+    border-bottom: 1px solid #3d393b;
+    ul {
+      @include flexCenter(row, center);
+      li,
+      a {
+        list-style: none;
+        text-decoration: none;
+        margin-left: 5px;
+        width: 60px;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        cursor: pointer;
+
+        &:nth-child(2)::before,
+        &:nth-child(3)::before,
+        &:nth-child(4)::before {
+          content: "";
+          width: 2px;
+          background-color: $textColor6;
+          height: 100%;
+          padding-right: 1px;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          //   border-left: 1px solid black;
+          margin: 2rem;
+          color: $textColor6;
+        }
+      }
+    }
+    .country-name {
+      button {
+        background-color: $textColor6;
+        padding: 1rem;
+        outline: none;
+        border: none;
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+        color: #e4e4e1;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer-details {
+    width: 40%;
+    padding: 1rem 15rem;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color:$textColor6;
+    margin-top: 2rem;
+    
+    p {
+        margin-top: 5px;
+     span::before{
+        content: "";
+        width: 2px;
+        background-color: $textColor6;
+       
+        padding-right: 1px;
+        margin: 1rem;
+       
+
+     }
+     &:last-child{
+        margin-top: 2rem;
+     }
+    }
+  }
+}

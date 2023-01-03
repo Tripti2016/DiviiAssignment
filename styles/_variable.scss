@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Allan&family=Arvo&family=Cardo&family=Courgette&family=Cuprum&family=Fredoka:wght@500&family=Inter:wght@400;500&family=Kalam:wght@300&family=Lobster&family=Noto+Sans:wght@100;400&family=Poppins:wght@200&family=Roboto:wght@300&display=swap");
+
+$primaryColur: #313131cc;
+$secondaryColor: #3d393b;
+$contactColor:#323841;
+$textColor1: #fff;
+$textColor2: #fbfaf7;
+$textColor3: #e4e4e1;
+$textColor4: #b1b3b2;
+$textColor5: #bebfbb;
+$textColor6:#999999;
+$font-family: "Noto Sans", sans-serif;
+$font-family2: "inter";
+$box-padding: 2rem;
+$transition: all 0.3s linear;
+
+@mixin flexCenter($direction, $alignment) {
+  display: flex;
+  justify-content: space-around;
+  align-items: $alignment;
+  flex-direction: $direction;
+}
+
+@mixin logoFormet($fontSize) {
+  font-family: $font-family;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: $textColor1;
+  font-weight: 400;
+  font-size: $fontSize;
+  span {
+    font-weight: 100;
+  }
+}
+
+@mixin button1($color, $font-size) {
+  font-family: $font-family2;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: 16px;
+  text-align: center;
+  color: $color;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  font-size: $font-family2;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+@import "./_variable.scss";
+@import './header';
+@import './info';
+@import './home';
+@import './pagination';
+@import './contact';
+@import './_footer';
+@import './media';
+
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+ 
+  height: auto;
+  // min-width: 1466px;
+  overflow-X: hidden;
+  position: relative;
+  
+}
+
+
+
+
+.active {
+  display: block;
+ 
+
+  
+}
+
+

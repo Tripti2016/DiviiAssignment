@@ -1,0 +1,157 @@
+@import './_variable';
+
+.header {
+  height: 100vh;
+  position: relative;
+ 
+  .navBar {
+    background-color: $primaryColur;
+    height: 100px;
+    @include flexCenter(row, center);
+    .nav-center {
+      margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+      padding: 1rem;
+      .navToggle{
+        visibility: hidden;
+      }
+     
+    h1 {
+      @include logoFormet(25px);
+    }
+    
+   
+    
+  }
+    ul {
+      width: 25%;
+
+      @include flexCenter(row, center);
+      li {
+        list-style: none;
+
+        line-height: 25px;
+        a {
+          text-decoration: none;
+          font-family: $font-family;
+          font-weight: 500;
+          font-size: 17px;
+          color: $textColor3;
+          cursor: pointer;
+        }
+      }
+      .close-btn{
+        visibility: hidden
+      }
+    }
+    
+  }
+  .header-content {
+    @include flexCenter(column, center);
+
+    &::before {
+      content: " ";
+      background:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url(../assets/0424_MB_02.png), no-repeat center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -100;
+      background-size: cover;
+    }
+    .header-content-box {
+      margin-top: 100px;
+      width: 500px;
+      height: 250px;
+      @include flexCenter(column, center);
+      filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.5));
+      img {
+        width: 120px;
+      }
+      h1 {
+        @include logoFormet(40px);
+      }
+      p {
+        font-family: $font-family;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        font-size: 20px;
+        line-height: 150%;
+        text-align: center;
+        color: $textColor2;
+      }
+    }
+  }
+  .header-intro {
+    @include flexCenter(row, center);
+    background-color: $textColor2;
+    width: 60%;
+    height: 70px;
+    position: absolute;
+    top: 90%;
+    left: 18%;
+    padding: $box-padding;
+    .header-intro-box1 {
+      @include flexCenter(column, flex-start);
+      height: 100%;
+      letter-spacing: 1px;
+      width: 35%;
+
+      h2 {
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 150%;
+        color: #7f983e;
+        width: 50%;
+        margin-left: 8px;
+      }
+      .box-border {
+        content: "";
+        left: 0px;
+        border: medium solid white;
+        width: 100%;
+        height: 5px;
+        background-color: #7f983e;
+      }
+      p {
+        font-family: $font-family2;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 16px;
+        text-align: center;
+        color: #8ba340;
+        opacity: 0.7;
+        letter-spacing: 1px;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+    .header-intro-box2 {
+      @include flexCenter(row, flex-start);
+      width: 100%;
+      justify-content: space-between;
+      border-bottom: 2px solid $textColor4;
+
+      letter-spacing: 1px;
+
+      .header-intro-box2-A {
+        padding-right: 1rem;
+        width: 40%;
+        h2 {
+          font-family: $font-family;
+          font-weight: 700;
+          line-height: 150%;
+          color: $textColor4;
+          font-size: 15px;
+          padding-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+}
+

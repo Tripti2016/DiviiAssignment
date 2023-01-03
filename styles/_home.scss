@@ -1,0 +1,155 @@
+@import './variable';
+
+.home {
+    height: 100vh;
+    width: 100vw;
+    background-color: $secondaryColor;
+    .home-contant {
+      overflow-x: hidden;
+      @include flexCenter(row, center);
+      height: 100%;
+      padding-top: 2.5rem;
+      justify-content: space-between;
+      .home-content-left {
+        img {
+          width: 700px;
+          height: 500px;
+          
+          padding: 1rem 0;
+        }
+      }
+      .home-content-right {
+        @include flexCenter(column, flex-start);
+        margin-left: 35px;
+        .home-content-right-top {
+          @include flexCenter(column, flex-start);
+          justify-content: space-around;
+          padding: 0rem 9rem 2rem 2rem;
+          height: 220px;
+          h1 {
+            font-size: 30px;
+            &:first-child {
+              font-family: $font-family;
+              font-weight: 500;
+              line-height: 140%;
+              /* or 56px */
+  
+              letter-spacing: -0.07em;
+              color: $textColor1;
+            }
+            span {
+              font-family: $font-family;
+              font-weight: lighter;
+              line-height: 140%;
+              letter-spacing: -0.07em;
+              color: $textColor1;
+  
+              &:first-child {
+                font-family: $font-family;
+                font-weight: 100;
+                line-height: 140%;
+                letter-spacing: -0.07em;
+                color: #d3b25b;
+              }
+            }
+          }
+          p {
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            letter-spacing: -0.05em;
+            color: $textColor1;
+            width: 80%;
+          }
+        }
+        .home-content-right-bottom {
+        
+          @include flexCenter(row, center);
+          width: 100%;
+          width: 110%;
+          gap: 1rem;
+          transform: translateX(-10%);
+  
+          .home-content-right-bot-box1 {
+            width: 220px;
+            height: 220px;
+            position: relative;
+            box-shadow: 9px 6px 14px #2a2929;
+  
+            &::before {
+              content: " ";
+              background: linear-gradient(
+                  0deg,
+                  rgba(69, 69, 69, 0.4),
+                  rgba(69, 69, 69, 0.4)
+                ),
+                url("../assets/image\ 181.png") no-repeat center;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+            }
+            .home-content-right-bot-box1-A {
+              @include flexCenter(column, flex-start);
+              position: absolute;
+              z-index: 2;
+              height: 70px;
+              bottom: 20px;
+              margin-left: 20px;
+             
+              h2 {
+                font-family: $font-family;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 150%;
+                letter-spacing: -0.05em;
+                color: $textColor5;
+              }
+              button {
+                @include button1($textColor5, 12px);
+              }
+            }
+            &:nth-child(2) {
+              transform: translateY(-10%);
+              &::before {
+                content: " ";
+                background: linear-gradient(
+                    0deg,
+                    rgba(69, 69, 69, 0.4),
+                    rgba(69, 69, 69, 0.4)
+                  ),
+                  url("../assets/image\ 19.png") no-repeat center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+              }
+            }
+            &:nth-child(3) {
+              &::before {
+                content: " ";
+                background: linear-gradient(
+                    0deg,
+                    rgba(69, 69, 69, 0.4),
+                    rgba(69, 69, 69, 0.4)
+                  ),
+                  url("../assets/컨셉\ 6\ 1.png") no-repeat center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
